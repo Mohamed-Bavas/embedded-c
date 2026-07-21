@@ -1,0 +1,26 @@
+#include <reg51.h>
+unsigned char num[]={
+	0x3F,
+	0x06,
+	0x5B,
+	0x4F,
+	0x66,
+	0x6D,
+	0x7D,
+	0x07,
+	0x7F,
+	0x6F
+};	
+void main(){
+	 TMOD=0x05;
+	TH0=0x00;
+	TL0=0x00;
+	TR0=1;
+	while(1){
+		if(TL0<=9){
+			P2=num[TL0];
+			}else{
+				TL0=0x00;
+			}
+		}
+}
