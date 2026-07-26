@@ -1,4 +1,6 @@
-#include <reg51.h>
+#include <stdio.h>
+#include <stdint.h>
+
 unsigned char num[]={
 0x3F,
 	0x06,
